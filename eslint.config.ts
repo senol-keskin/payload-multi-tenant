@@ -1,34 +1,42 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import tseslint from 'typescript-eslint'
-import json from '@eslint/json'
-import { defineConfig } from 'eslint/config'
-import prettierPlugin from 'eslint-plugin-prettier'
+import prettier from 'eslint-plugin-prettier'
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+import pluginQuery from '@tanstack/eslint-plugin-query'
 
-export default defineConfig([
-  {
-    files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
-    plugins: { js },
-    extends: ['js/recommended'],
-    languageOptions: { globals: { ...globals.browser, ...globals.node } },
-  },
-  tseslint.configs.recommended,
-  {
-    files: ['**/*.json'],
-    plugins: { json },
-    language: 'json/json',
-    extends: ['json/recommended'],
-  },
-  {
-    files: ['**/*.jsonc'],
-    plugins: { json },
-    language: 'json/jsonc',
-    extends: ['json/recommended'],
-  },
+import { FlatCompat } from '@eslint/eslintrc'
+import { globalIgnores } from 'eslint/config'
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+})
+
+const configs = [
   {
-    plugins: { prettier: prettierPlugin },
-    rules: { 'prettier/prettier': 'error' },
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'build/**',
+      'next-env.d.ts',
+    ],
   },
-  { ignores: ['node_modules', 'eslint.config.mjs', '**/dist', 'config/*'] },
-])
+  ...pluginQuery.configs['flat/recommended'],
+  ...compat.extends('next/core-web-vitals', 'next/typescript', 'prettier'),
+  {
+    plugins: {
+      prettier,
+    },
+
+    rules: {
+      'prettier/prettier': 'error',
+      'no-debugger': 'error',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+    },
+  },
+  globalIgnores(['.lintstagedrc.js']),
+]
+
+export default configs

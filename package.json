@@ -1,6 +1,7 @@
 {
   "name": "payload-multi-tenant",
-  "type": "module",
+  "private": "true",
+  "version": "0.0.1",
   "packageManager": "pnpm@10.18.2",
   "lint-staged": {
     "**/*.{js,ts,tsx}": [
@@ -13,6 +14,13 @@
     "yarn": "please-use-pnpm",
     "node": "24.10.0"
   },
+  "scripts": {
+    "prepare": "pnpm husky",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "client": "pnpm --filter web"
+  },
   "devDependencies": {
     "@eslint/js": "^9.37.0",
     "@eslint/json": "^0.13.2",
@@ -23,16 +31,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.4",
     "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
     "typescript-eslint": "^8.46.0"
-  },
-  "scripts": {
-    "prepare": "pnpm husky",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write ."
-  },
-  "dependencies": {
-    "commitizen": "^4.3.1",
-    "cz-conventional-changelog": "^3.3.0"
   }
 }

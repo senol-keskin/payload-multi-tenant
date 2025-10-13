@@ -103,12 +103,12 @@ export default async function Home() {
           fill
           alt='ParaflyTravel'
           priority
-          className='absolute top-0 left-0 -z-50 hidden h-full w-full md:block'
+          className='absolute left-0 top-0 -z-50 hidden h-full w-full md:block'
           style={{
             clipPath: 'ellipse(90% 90% at 50% 00%)',
           }}
         />
-        <div className='absolute top-0 right-0 m-1 hidden rounded bg-gray-200 p-1 text-center text-xs opacity-85 md:flex'>
+        <div className='absolute right-0 top-0 m-1 hidden rounded bg-gray-200 p-1 text-center text-xs opacity-85 md:flex'>
           Yeni Karamürsel Turizm ve Seyahat Acentası Belge No: 3102
         </div>
         <div>
@@ -166,7 +166,7 @@ export default async function Home() {
                 Tavsiye Ettiğimiz Oteller
               </h2>
               {hotelDestinationsBtns && hotelDestinationsBtns?.length > 0 && (
-                <div className='hidden gap-3 overflow-hidden py-8 whitespace-nowrap md:flex'>
+                <div className='hidden gap-3 overflow-hidden whitespace-nowrap py-8 md:flex'>
                   <ScrollArea w={'100%'}>
                     <div className='flex gap-3 pb-5'>
                       {hotelDestinationsBtns
@@ -201,7 +201,7 @@ export default async function Home() {
           )}
           {tourDeals?.data && tourDeals.data?.length > 0 && (
             <>
-              <h2 className='mt-8 mb-8 text-center text-2xl font-bold text-blue-900 md:text-3xl'>
+              <h2 className='mb-8 mt-8 text-center text-2xl font-bold text-blue-900 md:text-3xl'>
                 Tur Fırsatları
               </h2>
               <TourOpportunity data={tourDeals.data} />
