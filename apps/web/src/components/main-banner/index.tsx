@@ -1,0 +1,155 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+import { ActionIcon, AspectRatio, Box, Image, Skeleton } from '@mantine/core'
+import { Link } from 'next-view-transitions'
+import Autoplay from 'embla-carousel-autoplay'
+
+import { EmblaCarouselType } from 'embla-carousel'
+
+import { Carousel } from '@mantine/carousel'
+import { RiArrowLeftLine, RiArrowRightLine } from 'react-icons/ri'
+import clsx from 'clsx'
+import { cdnImageUrl } from '@/libs/cms-data'
+import { Route } from 'next'
+import { Container } from '@mantine/core'
+
+type SlideType = {
+  id: string
+  params: {
+    image: { value: string }
+    link?: { value: string }
+  }
+  Title: string
+}
+
+type PropType = {
+  slides: SlideType[]
+}
+
+const MainBannerCarousel: React.FC<PropType> = ({ slides }) => {
+  const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null)
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
+  const autoplay = useRef(Autoplay({ delay: 3000 }))
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    emblaApi.on('select', (event) => {
+      const scrollProgress = emblaApi.selectedScrollSnap()
+
+      setCurrentSlideIndex(scrollProgress)
+    })
+  }, [emblaApi])
+
+  return (
+    <div className='relative w-full max-w-full overflow-hidden'>
+      {!emblaApi && (
+        <div className='absolute inset-0 z-10 w-full'>
+          <AspectRatio ratio={2.6 / 1} className='w-full'>
+            <Skeleton className='h-full w-full rounded-lg' />
+          </AspectRatio>
+        </div>
+      )}
+      <Carousel
+        withIndicators={false}
+        withControls={false}
+        getEmblaApi={setEmblaApi}
+        plugins={[autoplay.current]}
+        onMouseEnter={autoplay.current.stop}
+        onMouseLeave={() => autoplay.current.play()}
+        slideGap={'lg'}
+        className={clsx(
+          'w-full max-w-full overflow-hidden transition-opacity duration-300',
+          {
+            'opacity-100': !!emblaApi,
+            'opacity-0': !emblaApi,
+          }
+        )}
+        style={{ maxWidth: '100%', width: '100%' }}
+      >
+        {slides.map((slide) => {
+          return (
+            <Carousel.Slide
+              key={slide.id}
+              className='w-full'
+              style={{ maxWidth: '100%', width: '100%' }}
+            >
+              <Box
+                component={Link}
+                href={(slide.params.link?.value || '#') as Route}
+                className='block w-full'
+                style={{ maxWidth: '100%', width: '100%' }}
+              >
+                <AspectRatio
+                  ratio={2.6 / 1}
+                  className='w-full'
+                  style={{ maxWidth: '100%', width: '100%' }}
+                >
+                  <Image
+                    className='h-full w-full rounded-lg object-cover p-0'
+                    src={cdnImageUrl(slide.params.image.value)}
+                    alt={slide.Title}
+                    bdrs={{ base: 'md', md: 'lg' }}
+                    style={{ maxWidth: '100%', width: '100%' }}
+                  />
+                </AspectRatio>
+              </Box>
+            </Carousel.Slide>
+          )
+        })}
+      </Carousel>
+
+      {emblaApi && (
+        <div className='hidden justify-between gap-4 pt-5 md:flex md:justify-center'>
+          <div>
+            <ActionIcon
+              radius={'xl'}
+              bg={'blue.1'}
+              c='blue.8'
+              bdrs={'100%'}
+              onClick={() => emblaApi.scrollPrev()}
+              size={'50'}
+              className='transition-all ease-in hover:scale-110'
+            >
+              <RiArrowLeftLine />
+            </ActionIcon>
+          </div>
+          <div className='hidden items-center gap-2 md:flex'>
+            {emblaApi.scrollSnapList().map((snap, snapIndex) => {
+              const isActiveState = currentSlideIndex === snapIndex
+              return (
+                <ActionIcon
+                  radius='xl'
+                  key={snap}
+                  bg={isActiveState ? 'blue.8' : 'blue.2'}
+                  bdrs={'100%'}
+                  size={isActiveState ? 21 : 14}
+                  onClick={() => {
+                    emblaApi.scrollTo(snapIndex)
+                  }}
+                  className='transition-all ease-in hover:scale-140'
+                />
+              )
+            })}
+          </div>
+          <div>
+            <ActionIcon
+              radius='xl'
+              bg={'blue.1'}
+              c='blue.8'
+              bdrs={'100%'}
+              onClick={() => emblaApi.scrollNext()}
+              size={'50'}
+              className='transition-all ease-in hover:scale-110'
+            >
+              <RiArrowRightLine />
+            </ActionIcon>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
+export { MainBannerCarousel }

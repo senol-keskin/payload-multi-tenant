@@ -7,15 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.18.2",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "sharp",
-      "esbuild",
-      "unrs-resolver"
-    ]
-  }
+  "packageManager": "pnpm@10.18.2"
 }

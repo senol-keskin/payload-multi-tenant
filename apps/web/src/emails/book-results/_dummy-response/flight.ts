@@ -1,0 +1,490 @@
+export const __dummy__flightPaymentSummaryResponse = {
+  data: {
+    passenger: {
+      modules: [1],
+      passengers: [
+        {
+          type: 0,
+          gender: 0,
+          fullName: 'BASAR  YILDIRIM',
+          birthday: '1998-03-02T02:00:00+02:00',
+          identityNumber: '11*******10',
+          bookingCode: '377H66',
+          campaignCode: null,
+          eTicketNumber: '2042437915583',
+          firstName: 'BASAR',
+          lastName: 'YILDIRIM',
+          mobilePhoneNumber: '+90546*****10',
+          email: 'BASARYLDRM1237@GMAIL.COM',
+          marketingAirlineCode: 'VF',
+          isRoundedTrip: false,
+          module: 1,
+          groupOrderIndex: 1,
+          localPassengerSequenceNo: 1,
+          localRelatedPassengerSequenceNo: null,
+          discount: {
+            value: 0,
+            currency: null,
+            rateValue: null,
+          },
+          productItemId: 848605,
+        },
+      ],
+      billingInformation: [
+        {
+          billingName: 'react test',
+          isCompany: false,
+          address: 'Kadikoy Kadikoy Istanbul',
+          taxNo: '10*******00',
+        },
+      ],
+      paymentInformation: {
+        basketTotal: 3039.13,
+        basketDiscountTotal: 0,
+        collectingTotal: 3039.13,
+        financellTotal: 0,
+        mlTotal: 3039.13,
+        rateOfInterest: 2,
+        installmentCount: 1,
+        bankName: 'HALKBANK',
+        encryptedCardHolder: 'B**** Y*******',
+        encryptedCardNumber: '521378******9263',
+        sellingCurrency: 'TRY',
+      },
+      ssrList: [],
+      passengerCargoAddress: [],
+      bookingDateTime: '2025-09-01T13:42:39.1965683',
+      fromSession: true,
+      authorizeKey: null,
+      shoppingFileId: 840436,
+      taxAmount: 498.79,
+      shippingAmount: 0,
+      operationResultPromotionUsageList: null,
+    },
+    product: {
+      summaryResponse: {
+        flightList: [
+          {
+            flightFareInfo: {
+              flightDetailKeys: [
+                'ig/qZ7j5D4tqvYHSiMSn/W+X9z3XQlRfV0fhoe4Q6QzaywvRVNFUbr41RfN4yCrrTPpSV0B1Z3eWoal91CpoqVoM+TdnfbiQHH4IGNmqDQmgIt5fZ6abz+gcL2x8xRF6',
+              ],
+              groupId: 0,
+              key: 'ig/qZ7j5D4tqvYHSiMSn/W+X9z3XQlRfV0fhoe4Q6QzaywvRVNFUbr41RfN4yCrrTPpSV0B1Z3eWoal91CpoqXpTrQh3ZEN1TmOWwsKvQME=',
+              totalPrice: {
+                value: 3039.13,
+                currency: 'TRY',
+                rateValue: null,
+              },
+              basePrice: {
+                value: 2265.34,
+                currency: 'TRY',
+                rateValue: null,
+              },
+              taxes: {
+                value: 498.79,
+                currency: 'TRY',
+                rateValue: null,
+              },
+              discount: {
+                value: 0,
+                currency: null,
+                rateValue: null,
+              },
+              buyFee: {
+                code: null,
+                price: {
+                  value: 0,
+                  currency: null,
+                  rateValue: null,
+                },
+              },
+              fee: {
+                code: '',
+                price: {
+                  value: 275,
+                  currency: 'TRY',
+                  rateValue: null,
+                },
+              },
+              passengerPrices: [
+                {
+                  unitPrice: {
+                    value: 3039.13,
+                    currency: 'TRY',
+                    rateValue: null,
+                  },
+                  unitBasePrice: {
+                    value: 2265.34,
+                    currency: 'TRY',
+                    rateValue: null,
+                  },
+                  unitFee: {
+                    code: '',
+                    price: {
+                      value: 275,
+                      currency: 'TRY',
+                      rateValue: null,
+                    },
+                  },
+                  unitTax: {
+                    value: 498.79,
+                    currency: 'TRY',
+                    rateValue: null,
+                  },
+                  cancelPenalty: null,
+                  changePenalty: null,
+                  passengers: [
+                    {
+                      key: '2A75B0EC90A1543400BCB35F57C913B28A0E5B3C0513EBC331598E9776878E8A',
+                      name: null,
+                      passengerType: 0,
+                      age: 0,
+                      birthday: '0001-01-01T00:00:00',
+                      gender: 0,
+                    },
+                  ],
+                  taxInfos: [
+                    {
+                      key: 'YR',
+                      value: '350.00',
+                    },
+                    {
+                      key: 'VQ',
+                      value: '148.79',
+                    },
+                    {
+                      key: '||',
+                      value: '0',
+                    },
+                  ],
+                  serviceCharges: null,
+                },
+              ],
+              taxInfos: [
+                {
+                  key: 'YR',
+                  value: '350.00',
+                },
+                {
+                  key: 'VQ',
+                  value: '148.79',
+                },
+                {
+                  key: '||',
+                  value: '0',
+                },
+              ],
+              serviceCharges: null,
+            },
+            flightDetail: {
+              key: 'ig/qZ7j5D4tqvYHSiMSn/W+X9z3XQlRfV0fhoe4Q6QzaywvRVNFUbr41RfN4yCrrTPpSV0B1Z3eWoal91CpoqVoM+TdnfbiQHH4IGNmqDQmgIt5fZ6abz+gcL2x8xRF6',
+              groupId: 0,
+              flightSegmentKeys: [
+                'ig/qZ7j5D4tqvYHSiMSn/W+X9z3XQlRfV0fhoe4Q6QzaywvRVNFUbr41RfN4yCrrTPpSV0B1Z3eWoal91CpoqT6QWBg6CjPcZwz8xrc2HGdATKDin0TQ1QRFQj7TH1BRseurixR1g4am7Zh9dsps5w==',
+              ],
+              travelTime: '01:25:00',
+              direction: 1,
+              isDomestic: true,
+              isOWCCombinable: false,
+              isPromotional: true,
+              reservable: true,
+              freeVolatileData: {
+                OfferID:
+                  'MGFlMjdjOWI4NmQ3NWFkM2I3Mzc5YjFhMjVhMzdjM2RlY2IyYzIxZWE4NDM4NzRmZDg4MWFjMjY4MjQ3ZTg0NjUyMjM3MzA3NGI5NGJiZDVjMjU2ZTg1YWRmNDkxMWFhMzg3ZjNmYjEwNzJjZjlhMGNhMTQ2YmZiZjFlMDIwNWIwZTdhMjI3ZjViMWViMjY1ZDkzODJlMDY3ODk0MGExNTMyMDY4YWU1ZDFlMGM0MjcxY2Q3OTEyMzNiMWFmNWQxMTQ3MjRjZTdmMGI4ZDE4ZTUxMWM4NWFhMWI4N2FjMDg2NTA3ZjE5YWRjZWQwMDViNzJmNDAwMWJjNjE0ZTA0OWI3OGM2ZDViMzAwNWIwY2Q3OTlmYjA4MWJiMDUyYjY1MjFlMmJmYTg1YTc2OWE4YTliODQzOTQyOWMwMDMxZmQ5ZWQzZjllZTRhY2Q2MDRhYjFiZDNiNTFlMGQ1OGM3MTMzNDQxOWFiNjY3MjljMmRmZTJiMDEwMmNjZmViMWNiMDhjNGM4MjAzMjJhMDZmMzM3YTBiNmUxMmRiMjU4ZTE5NWIxY2NmMTgwNjZkYTk0MDQxOWZkOGM4NTU0MmZkOTZiZmFjYjAwMmMyYjExYzBmM2YzOTkzNmM4ZDY0ZGYyYTY0ZThjYzQzZDVjNTA3NjRhODgyZmZlNWY0NzZkNTYxZTA4MTcxMmM4NTg2MzcyMTc5MDM4Y2FiMmE2Njc2NzM4Mjg1N2NiZDMyZWU5Yzk3YzI2YWUxN2Q4MmY1NTQ0MzBhMjRmNzE4ZDUxYmU1MGJmN2FiMmE5NTQ2NDY5NTliOTY0MjI2ODNhZDJmNjMyNWZiNzRiNzYzYzAwMTIzNDAyOTdlNTk0NTJhOTQ2YWRlMjk4YWVkYTMwM2FmY2JiZTc4YzE5OWU0ZWQ2MWU1MzY0MWMzNmRhNmM2NWViMzYxMmU2NmFmZDgzMTFlMDdiODA1ZTQ0NDhjNTFjNGJiYTRmYTRjZGRlMmVkNjM5NDY2NGNjNTA1Y2ViNzZlYjUyNjA5MDc3ZjcyNGMyYjgxYmJjMjA1YTMzNjAxYmY1MTM2Y2NiM2ZiOGE1M2FhYjZhNjVlMTRiMWM0NGI2OWJmMjUwYjNlN2NiNzFmYjUwYTc3NjAyNWY0NjJiOGU1OTI1NWUwM2I1OTBlODAzNWYyZDFjMGUxOTcyYzM2MmQzZWY2ZDA5MmRlZDFkNTFjNWM4ZDM0YjQ1MDBmZmRjY2NkMmY4YjVmNzg2NzVkZDliOWQ1N2MyZmNlZDdiMWZkZDliMzFiZTkzODQ0Y2IwMTRhOTY2NGVhMTc0MGJmNmJlZGMyN2Q1YWFmNWU3YTI5NWRhMzZiYmU4MmY5ZThjYTUxZjMxNTBjODI5MGY1YjJjMjVjODU0Yjc+TFMyNT5FQ08+U0FXPkFZVD4yMDI1LTEwLTE3IDEyOjUwOjAwPjIwMjUtMTAtMTcgMTQ6MTU6MDA+VkY+MzAzNj5MPjk+RUNPTk9NWT5CNzM3LThNQVggN004LVkxODk+TXpjMU1ETTFOUT4tMT4tMT5PTkVfV0FZPlNBVz5BbnRhbHlhIChBWVQpPi0xPlBSRU1JVU0+UDE0ND5QUkVNSVVNPjk1ODY+MTA5NzA0-',
+                Owner: 'VF',
+                ResponseID: 'c29b417f-361a-4852-bd40-b9f97dbeb886',
+                BrandName: 'PREMIUM',
+                uniquecounter: 14,
+                PaxJourneyRefID: 'SAW-AYT-J5',
+                direction: 0,
+                bundleservicelist: [
+                  'ServiceDef-1',
+                  'ServiceDef-2',
+                  'ServiceDef-7',
+                  'ServiceDef-8',
+                  'ServiceDef-9',
+                  'ServiceDef-10',
+                  'ServiceDef-11',
+                ],
+                bundleservicecodelist: [
+                  'HBAG8',
+                  'PERSONALBELONGINGS4',
+                  'CHECKEDBAG25',
+                  'PREFERREDSEAT',
+                  'SANDWICH',
+                  'REISSUEWOPENALTY1H',
+                  'FULLREFUND12H',
+                ],
+                Seq: 'VF3036_',
+                offerpaxid: ['OfferItem-29:ADT:ADTPax-1'],
+                totalpriceamountt: 2764.13,
+                totalpriceamountc: 'TRY',
+                StandartSeatSelection: false,
+                AllSeatSelection: true,
+                FreeSandwich: true,
+                Entertainment: false,
+                FlexibleReturnChangeRight: true,
+              },
+            },
+            flightSegments: [
+              {
+                key: 'ig/qZ7j5D4tqvYHSiMSn/W+X9z3XQlRfV0fhoe4Q6QzaywvRVNFUbr41RfN4yCrrTPpSV0B1Z3eWoal91CpoqT6QWBg6CjPcZwz8xrc2HGdATKDin0TQ1QRFQj7TH1BRseurixR1g4am7Zh9dsps5w==',
+                groupId: 0,
+                origin: {
+                  code: 'SAW',
+                  isDomestic: false,
+                  iata: null,
+                  type: 7,
+                  id: 0,
+                },
+                destination: {
+                  code: 'AYT',
+                  isDomestic: false,
+                  iata: null,
+                  type: 7,
+                  id: 0,
+                },
+                departureTime: '2025-10-17T12:50:00',
+                arrivalTime: '2025-10-17T14:15:00',
+                flightTime: '01:25:00',
+                operatingAirline: {
+                  code: 'VF',
+                  value: null,
+                  countryCode: null,
+                },
+                marketingAirline: {
+                  code: 'VF',
+                  value: null,
+                  countryCode: null,
+                },
+                flightNumber: '3036',
+                cabinClass: 0,
+                bookingCode: 'LS25',
+                equipment: null,
+                isMeal: false,
+                quota: 1,
+                baggageAllowance: {
+                  maxWeight: {
+                    value: 25,
+                    unit: 0,
+                  },
+                  piece: {
+                    pieceCount: 0,
+                  },
+                },
+                freeVolatileData: {
+                  OfferID:
+                    'MGFlMjdjOWI4NmQ3NWFkM2I3Mzc5YjFhMjVhMzdjM2RlY2IyYzIxZWE4NDM4NzRmZDg4MWFjMjY4MjQ3ZTg0NjUyMjM3MzA3NGI5NGJiZDVjMjU2ZTg1YWRmNDkxMWFhMzg3ZjNmYjEwNzJjZjlhMGNhMTQ2YmZiZjFlMDIwNWIwZTdhMjI3ZjViMWViMjY1ZDkzODJlMDY3ODk0MGExNTMyMDY4YWU1ZDFlMGM0MjcxY2Q3OTEyMzNiMWFmNWQxMTQ3MjRjZTdmMGI4ZDE4ZTUxMWM4NWFhMWI4N2FjMDg2NTA3ZjE5YWRjZWQwMDViNzJmNDAwMWJjNjE0ZTA0OWI3OGM2ZDViMzAwNWIwY2Q3OTlmYjA4MWJiMDUyYjY1MjFlMmJmYTg1YTc2OWE4YTliODQzOTQyOWMwMDMxZmQ5ZWQzZjllZTRhY2Q2MDRhYjFiZDNiNTFlMGQ1OGM3MTMzNDQxOWFiNjY3MjljMmRmZTJiMDEwMmNjZmViMWNiMDhjNGM4MjAzMjJhMDZmMzM3YTBiNmUxMmRiMjU4ZTE5NWIxY2NmMTgwNjZkYTk0MDQxOWZkOGM4NTU0MmZkOTZiZmFjYjAwMmMyYjExYzBmM2YzOTkzNmM4ZDY0ZGYyYTY0ZThjYzQzZDVjNTA3NjRhODgyZmZlNWY0NzZkNTYxZTA4MTcxMmM4NTg2MzcyMTc5MDM4Y2FiMmE2Njc2NzM4Mjg1N2NiZDMyZWU5Yzk3YzI2YWUxN2Q4MmY1NTQ0MzBhMjRmNzE4ZDUxYmU1MGJmN2FiMmE5NTQ2NDY5NTliOTY0MjI2ODNhZDJmNjMyNWZiNzRiNzYzYzAwMTIzNDAyOTdlNTk0NTJhOTQ2YWRlMjk4YWVkYTMwM2FmY2JiZTc4YzE5OWU0ZWQ2MWU1MzY0MWMzNmRhNmM2NWViMzYxMmU2NmFmZDgzMTFlMDdiODA1ZTQ0NDhjNTFjNGJiYTRmYTRjZGRlMmVkNjM5NDY2NGNjNTA1Y2ViNzZlYjUyNjA5MDc3ZjcyNGMyYjgxYmJjMjA1YTMzNjAxYmY1MTM2Y2NiM2ZiOGE1M2FhYjZhNjVlMTRiMWM0NGI2OWJmMjUwYjNlN2NiNzFmYjUwYTc3NjAyNWY0NjJiOGU1OTI1NWUwM2I1OTBlODAzNWYyZDFjMGUxOTcyYzM2MmQzZWY2ZDA5MmRlZDFkNTFjNWM4ZDM0YjQ1MDBmZmRjY2NkMmY4YjVmNzg2NzVkZDliOWQ1N2MyZmNlZDdiMWZkZDliMzFiZTkzODQ0Y2IwMTRhOTY2NGVhMTc0MGJmNmJlZGMyN2Q1YWFmNWU3YTI5NWRhMzZiYmU4MmY5ZThjYTUxZjMxNTBjODI5MGY1YjJjMjVjODU0Yjc+TFMyNT5FQ08+U0FXPkFZVD4yMDI1LTEwLTE3IDEyOjUwOjAwPjIwMjUtMTAtMTcgMTQ6MTU6MDA+VkY+MzAzNj5MPjk+RUNPTk9NWT5CNzM3LThNQVggN004LVkxODk+TXpjMU1ETTFOUT4tMT4tMT5PTkVfV0FZPlNBVz5BbnRhbHlhIChBWVQpPi0xPlBSRU1JVU0+UDE0ND5QUkVNSVVNPjk1ODY+MTA5NzA0-',
+                  Owner: 'VF',
+                  ResponseID: 'c29b417f-361a-4852-bd40-b9f97dbeb886',
+                  BrandName: 'PREMIUM',
+                  uniquecounter: 14,
+                  paxsegrefid: 'VF3036-17Oct-SAWAYT-Mzc1MDM1NQ',
+                  direction: 0,
+                  bundleservicelist: [
+                    'ServiceDef-1',
+                    'ServiceDef-2',
+                    'ServiceDef-7',
+                    'ServiceDef-8',
+                    'ServiceDef-9',
+                    'ServiceDef-10',
+                    'ServiceDef-11',
+                  ],
+                  bundleservicecodelist: [
+                    'HBAG8',
+                    'PERSONALBELONGINGS4',
+                    'CHECKEDBAG25',
+                    'PREFERREDSEAT',
+                    'SANDWICH',
+                    'REISSUEWOPENALTY1H',
+                    'FULLREFUND12H',
+                  ],
+                  Seq: 'VF3036_',
+                },
+              },
+            ],
+            flightPackageInfos: [],
+          },
+        ],
+        flightFareInfo: {
+          flightDetailKeys: null,
+          groupId: 0,
+          key: null,
+          totalPrice: {
+            value: 3039.13,
+            currency: 'TRY',
+            rateValue: null,
+          },
+          basePrice: {
+            value: 2265.34,
+            currency: 'TRY',
+            rateValue: null,
+          },
+          taxes: {
+            value: 498.79,
+            currency: 'TRY',
+            rateValue: null,
+          },
+          discount: {
+            value: 0,
+            currency: null,
+            rateValue: null,
+          },
+          buyFee: {
+            code: null,
+            price: {
+              value: 0,
+              currency: null,
+              rateValue: null,
+            },
+          },
+          fee: {
+            code: '',
+            price: {
+              value: 275,
+              currency: 'TRY',
+              rateValue: null,
+            },
+          },
+          passengerPrices: [
+            {
+              unitPrice: {
+                value: 3039.13,
+                currency: 'TRY',
+                rateValue: null,
+              },
+              unitBasePrice: {
+                value: 2265.34,
+                currency: 'TRY',
+                rateValue: null,
+              },
+              unitFee: {
+                code: '',
+                price: {
+                  value: 275,
+                  currency: 'TRY',
+                  rateValue: null,
+                },
+              },
+              unitTax: {
+                value: 498.79,
+                currency: 'TRY',
+                rateValue: null,
+              },
+              cancelPenalty: null,
+              changePenalty: null,
+              passengers: [
+                {
+                  key: '2A75B0EC90A1543400BCB35F57C913B28A0E5B3C0513EBC331598E9776878E8A',
+                  name: null,
+                  passengerType: 0,
+                  age: 0,
+                  birthday: '0001-01-01T00:00:00',
+                  gender: 0,
+                },
+              ],
+              taxInfos: [
+                {
+                  key: 'YR',
+                  value: '350.00',
+                },
+                {
+                  key: 'VQ',
+                  value: '148.79',
+                },
+                {
+                  key: '||',
+                  value: '0',
+                },
+              ],
+              serviceCharges: null,
+            },
+          ],
+          taxInfos: [
+            {
+              key: 'YR',
+              value: '350.00',
+            },
+            {
+              key: 'VQ',
+              value: '148.79',
+            },
+            {
+              key: '||',
+              value: '0',
+            },
+          ],
+          serviceCharges: [],
+        },
+        flightPackageInfos: [],
+        isReservable: true,
+        hasOwc: false,
+        activeFlightTripKind: 1,
+        sessionToken:
+          '7A8C45B38A315FA3AA6504F96A8895CDF5CE0452F823E7B704262F55AEDF88FC',
+        airportList: {
+          SAW: {
+            id: 90073,
+            code: 'SAW',
+            value: [
+              {
+                langCode: 'tr_TR',
+                value: 'Sabiha Gökçen Uluslararası Havalimanı',
+              },
+            ],
+            countryCode: 'tr',
+            country: 'Türkiye',
+            city: 'İstanbul',
+          },
+          AYT: {
+            id: 90052,
+            code: 'AYT',
+            value: [
+              {
+                langCode: 'tr_TR',
+                value: 'Antalya Havalimanı',
+              },
+            ],
+            countryCode: 'tr',
+            country: 'Türkiye',
+            city: 'Antalya',
+          },
+        },
+        airlineList: {
+          VF: 'AJet',
+        },
+        applyCancelationInsurance: false,
+        buyInsurancePrice: 0,
+        sellInsurancePrice: 0,
+        showOnlyInsurancePrice: 0,
+        productKey: null,
+        moduleName: 'Flight',
+        totalPrice: 3039.13,
+        priceCurrency: 'TRY',
+        loyaltyMultiple: 2,
+        couponDiscountList: null,
+        extraCharges: null,
+        financellDiscount: {
+          value: 0,
+          currency: null,
+          rateValue: null,
+        },
+      },
+    },
+    hotelCancelWarranty: {
+      selectingCancelWarranty: false,
+      hasHotelWarranty: false,
+      cancelWarrantyPrice: 0,
+      hotelWarrantyDiscountSelected: false,
+      totalPrice: 0,
+      dayCount: 0,
+      couponActive: false,
+    },
+  },
+  success: true,
+  statusCode: 0,
+  message: null,
+  errors: null,
+  validModelState: null,
+}
